@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <div className="alert alert-danger">Hello World</div>
       </header>
     </div>
   );
