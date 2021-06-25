@@ -5,10 +5,10 @@
     padding-left: 0.5rem;
 }
 .yellove{
-    color:rgb(255, 238, 0);
+    color:var(--yellow);
 }
 .top_hover:hover{
-color:rgb(255, 238, 0);
+color:var(--yellow);
 text-decoration: none;
 }
 .top_hover{

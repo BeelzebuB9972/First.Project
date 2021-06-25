@@ -1,0 +1,246 @@
+import "./search_nav.css";
+import React from "react";
+
+function search() {
+  const bodyKits = ["Honda", "Maruti Suzuki", "Volkswagon", "Chevorlet"];
+  const carAudio = [
+    "Amplifiers",
+    "Speakers",
+    "Subwoofers",
+    "Audio Accessories",
+  ];
+  const wheels = ["TSW", "Sparco", "Niche Wheels"];
+  const lights = ["Lightforce", "Headlights"];
+  const suspension = ["MTS shock absorber", "MTS lower spings"];
+  const mufflers = ["Bora"];
+  const mechandise = ["MH T-Shirts", "MH Stickers"];
+  const dropdown = (list) => {
+    return list.map((elem, index, arr) => {
+      if (index != arr.length - 1) {
+        return (
+          <React.Fragment>
+            <a href="#" className="dropdown-item">
+              <span className="font-en">{elem}</span>
+            </a>
+            <hr />
+          </React.Fragment>
+        );
+      } else {
+        return (
+          <React.Fragment>
+            <a href="#" className="dropdown-item">
+              <span className="font-en">{elem}</span>
+            </a>
+          </React.Fragment>
+        );
+      }
+    });
+  };
+  return (
+    <div className="container-fluid">
+      <div className="row justify-content-center">
+        <div className="col-md-2 offset-md-1">
+          <b>
+            <a href="#" className="logo_anchor">
+              LOGO DESIGN
+            </a>
+          </b>
+        </div>
+        <div className="col-md-6 input-group">
+          <input
+            type="search"
+            placeholder="Search for item"
+            name="search"
+            id="search"
+            autoComplete="off"
+            className="srch form-control"
+          />
+          <button id="search-btn" name="search-btn">
+            <i className="fas fa-search "></i>
+          </button>
+        </div>
+        <div className="col-md-3 ">
+          <a
+            href="#"
+            className="sanchor"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Compare"
+          >
+            <span className="sicon fas fa-exchange-alt fa-2x"></span>
+            <span className="slink badge badge-light">0</span>
+          </a>
+          <a
+            href="#"
+            className="sanchor"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Wishlist"
+          >
+            <i className="sicon fa fa-heart fa-2x" aria-hidden="true"></i>
+            <span className="slink2 badge badge-light">0</span>
+          </a>
+          <a href="#" className="sanchor">
+            <i
+              className="sicon fa fa-shopping-bag fa-2x"
+              aria-hidden="true"
+            ></i>
+            <span className="slink3 badge badge-warning">0</span>
+          </a>
+        </div>
+        <div className="col-md-12 ">
+          <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav ml-auto mr-auto">
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Accessories
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Car Audio
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(carAudio)}
+                  </div>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Bodykits
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(bodyKits)}
+                  </div>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Wheels
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(wheels)}
+                  </div>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lights
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(lights)}
+                  </div>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Suspension
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(suspension)}
+                  </div>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Mufflers
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(mufflers)}
+                  </div>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Merchandise
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {dropdown(mechandise)}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default search;

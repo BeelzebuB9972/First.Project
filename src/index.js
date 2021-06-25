@@ -10,9 +10,8 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 
-import TopSection from './top_section/top_section'
-import Search from './search/search'
-
+import TopSection from './components/top_section/top_section'
+import Search from './components/search_nav/search_nav'
 
 ReactDOM.render(
   <React.StrictMode>
