@@ -23,11 +23,11 @@ function top_section() {
             <span className="top_hover">
               <i className="fa fa-user" aria-hidden="true"></i>
               <span className="top_section_span">
-                <span>Register </span>
+                <a href="#" className="top_section_span top_hover">Register </a>
               </span>
             </span>
             or
-            <span className="top_section_span top_hover">Sign-in</span>
+            <a href="#" className="top_section_span top_hover">Sign-in</a>
           </p>
         </div>
       </div>
