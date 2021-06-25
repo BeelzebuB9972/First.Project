@@ -1,0 +1,17 @@
+.top_section{
+    padding-top:0.5rem;
+}
+.top_section_span{
+    padding-left: 0.5rem;
+}
+.yellove{
+    color:rgb(255, 238, 0);
+}
+.top_hover:hover{
+color:rgb(255, 238, 0);
+text-decoration: none;
+}
+.top_hover{
+    text-decoration: none;
+    color:black;
+}
