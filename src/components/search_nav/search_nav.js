@@ -38,7 +38,7 @@ function search() {
   };
   return (
     <div className="container-fluid">
-      <div className="row justify-content-center">
+      <div className="row">
         <div className="col-md-2 offset-md-1">
           <b>
             <a href="#" className="logo_anchor">
@@ -59,7 +59,7 @@ function search() {
             <i className="fas fa-search "></i>
           </button>
         </div>
-        <div className="col-md-3 ">
+        <div className="col-md-3 order-md-3 offset-md-0 order-lg-3 col-sm-4 offset-sm-6 order-sm-4">
           <a
             href="#"
             className="sanchor"
@@ -88,7 +88,8 @@ function search() {
             <span className="slink3 badge badge-warning">0</span>
           </a>
         </div>
-        <div className="col-md-12 ">
+
+        <div className="col-md-12 offset-md-0 order-md-4 col-sm-2 order-sm-3">
           <nav class="navbar navbar-expand-lg navbar-light bg-warning">
             <button
               class="navbar-toggler"
