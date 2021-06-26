@@ -12,11 +12,13 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 
 import TopSection from './components/top_section/top_section'
 import Search from './components/search_nav/search_nav'
+import Carousel from './components/carousel/carousel';
 
 ReactDOM.render(
   <React.StrictMode>
     <TopSection />
     <Search />
+    <Carousel />
   </React.StrictMode>,
   document.getElementById('root')
 );
