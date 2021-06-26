@@ -10,15 +10,17 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 
-import TopSection from './components/top_section/top_section'
-import Search from './components/search_nav/search_nav'
+import TopSection from './components/top_section/top_section';
+import Search from './components/search_nav/search_nav';
 import Carousel from './components/carousel/carousel';
+import Features from './components/features/features';
 
 ReactDOM.render(
   <React.StrictMode>
     <TopSection />
     <Search />
     <Carousel />
+    <Features />
   </React.StrictMode>,
   document.getElementById('root')
 );
