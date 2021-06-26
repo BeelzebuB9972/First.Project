@@ -14,6 +14,7 @@ import TopSection from './components/top_section/top_section';
 import Search from './components/search_nav/search_nav';
 import Carousel from './components/carousel/carousel';
 import Features from './components/features/features';
+import TrendTabs from './components/trend_tabs/trend_tabs'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Search />
     <Carousel />
     <Features />
+    <TrendTabs />
   </React.StrictMode>,
   document.getElementById('root')
 );
