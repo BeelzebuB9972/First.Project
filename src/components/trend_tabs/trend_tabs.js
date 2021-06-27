@@ -1,7 +1,12 @@
 import Card from "./card";
-import React from "react";
+import React, { useEffect } from "react";
+import './trend_tabs.css'
 
-function trendTabs() {
+function Trendtabs() {
+
+  let removeClass = e =>{
+    document.getElementById("Featured").classList.remove("active")
+  }
   const featured = [
     { category: "Black & Machined with Dark Tint", name: "Niche TARGA M130" },
     { category: "SATIN BLACK", name: "Niche Vosso M203" },
@@ -12,42 +17,40 @@ function trendTabs() {
     return list.map((elem) => <Card data={elem} />);
   }
   return (
-    <div className="container">
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a data-toggle="tab" href="#Featured">
-            Featured
+    <div className="container mt-4 pb-5">
+      <ul className="nav nav-tabs">
+        <li className="tab1 active" id="Featured">
+          <a data-toggle="tab" href="#Featured" >
+            <b>Featured</b>
           </a>
         </li>
-        <li>
-          <a data-toggle="tab" href="#Trending">
-            Trending
+        <li className="tab1" >
+          <a data-toggle="tab" href="#Trending" onClick={(e)=> removeClass(e)}>
+          <b>Trending</b>
           </a>
         </li>
-        <li>
-          <a data-toggle="tab" href="#BestSellers">
-            Best Sellers
+        <li className="tab1">
+          <a data-toggle="tab" href="#BestSellers" onClick={(e)=> removeClass(e)}>
+          <b>Best Sellers</b>
           </a>
         </li>
       </ul>
 
-      <div class="tab-content">
-        <div id="Featured" class="tab-pane show fade in active">
+      <div className="tab-content">
+        <div id="Featured" className="tab-pane show fade in active nactive">
           <div className="container">
             <div className="row mt-5">{render_card(featured)}</div>
           </div>
         </div>
-        <div id="Trending" class="tab-pane fade">
-          <h3>Menu 1</h3>
-          <p>Some content in menu 1.</p>
+        <div id="Trending" className="tab-pane fade nactive">
+        <div className="row mt-5">{render_card(featured)}</div>
         </div>
-        <div id="BestSellers" class="tab-pane fade">
-          <h3>Menu 2</h3>
-          <p>Some content in menu 2.</p>
+        <div id="BestSellers" className="tab-pane fade nactive">
+        <div className="row mt-5">{render_card(featured)}</div>
         </div>
       </div>
     </div>
   );
 }
 
-export default trendTabs;
+export default Trendtabs;

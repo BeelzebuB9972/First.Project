@@ -10,13 +10,13 @@ function carousel() {
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active nactive">
       <img class="d-block w-100" src="..." alt="First slide"/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item nactive">
       <img class="d-block w-100" src="..." alt="Second slide"/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item nactive">
       <img class="d-block w-100" src="..." alt="Third slide"/>
     </div>
   </div>
