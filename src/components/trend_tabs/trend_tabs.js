@@ -9,9 +9,9 @@ function Trendtabs() {
   }
   const featured = [
     { category: "Black & Machined with Dark Tint", name: "Niche TARGA M130" },
-    { category: "SATIN BLACK", name: "Niche Vosso M203" },
-    { category: "ANTHRACITE", name: "Niche VOSSO M204" },
-    { category: "Bronze", name: "Niche VICE M227" },
+    { category: "SATIN BLACK", name: "Niche Vosso M203"},
+    { category: "ANTHRACITE", name: "Niche VOSSO M204"},
+    { category: "Bronze", name: "Niche VICE M227"},
   ];
   function render_card(list) {
     return list.map((elem) => <Card data={elem} />);

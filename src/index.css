@@ -1,5 +1,6 @@
 root{
   --yellow:yellow;
+  --red:rgb(160, 1, 1);
 }
 body {
   margin: 0;

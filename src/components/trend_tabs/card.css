@@ -1,7 +1,7 @@
 .smallf{
     font-size: 0.9rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:rgb(73, 69, 69)
+    color:rgb(73, 69, 69);
 }
 .bluec{
     color:blue;
@@ -40,3 +40,25 @@
     height:10rem;
     width:3rem;
 }
+.disc{
+    text-decoration: line-through;
+}
+.price{
+    font-size: larger;
+    color:var(--red)
+}
+.mty{
+    height: 4rem;
+}
+.sale-tag{
+    position:absolute;
+    top:9rem;
+    padding:0.4rem 0.2rem 0.4rem 0.2rem;
+    background-color:black;
+    color: white;
+    border-radius: 1.5rem;
+}
+/* .pos{
+    position:relative;
+    bottom:100rem
+} */
