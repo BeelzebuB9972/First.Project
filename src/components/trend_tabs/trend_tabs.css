@@ -3,7 +3,7 @@
     margin-bottom: 0.1rem;;
     font-size: larger;
 }
-.active{
+.ultab1>li>a.active{
     border-bottom: .3rem solid var(--yellow);
 }
 .tab1>a:hover{

@@ -1,11 +1,11 @@
 import Card from "./card";
-import React, { useEffect } from "react";
 import './trend_tabs.css'
 
 function Trendtabs() {
 
   let removeClass = e =>{
-    document.getElementById("Featured").classList.remove("active")
+    console.log("hi")
+    document.getElementById("tab1").classList.add("active")
   }
   const featured = [
     { category: "Black & Machined with Dark Tint", name: "Niche TARGA M130" },
@@ -18,19 +18,19 @@ function Trendtabs() {
   }
   return (
     <div className="container mt-4 pb-5">
-      <ul className="nav nav-tabs">
-        <li className="tab1 active" id="Featured">
-          <a data-toggle="tab" href="#Featured" >
+      <ul className="nav nav-tabs ultab1">
+        <li className="tab1 active">
+          <a data-toggle="tab" className="active" href="#Featured" id="tab1">
             <b>Featured</b>
           </a>
         </li>
         <li className="tab1" >
-          <a data-toggle="tab" href="#Trending" onClick={(e)=> removeClass(e)}>
+          <a data-toggle="tab" href="#Trending">
           <b>Trending</b>
           </a>
         </li>
         <li className="tab1">
-          <a data-toggle="tab" href="#BestSellers" onClick={(e)=> removeClass(e)}>
+          <a data-toggle="tab" href="#BestSellers">
           <b>Best Sellers</b>
           </a>
         </li>
