@@ -1,0 +1,7 @@
+.fpfont{
+    font-size: larger;
+}
+.fpbrdr{
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid var(--yellow);
+}

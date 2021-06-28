@@ -1,0 +1,12 @@
+.fp_font{
+    text-decoration: none;
+    color:blue
+}
+.fp_font:hover{
+    text-decoration: none;
+    color:var(--yellow)
+}
+.fp_disc{
+    text-decoration: line-through;
+    font-size: smaller;
+}

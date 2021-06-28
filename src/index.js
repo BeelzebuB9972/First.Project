@@ -17,6 +17,7 @@ import Features from './components/features/features';
 import TrendTabs from './components/trend_tabs/trend_tabs'
 import BestSellers from './components/best_sellers/best_sellers'
 import TopCategories from './components/top_categories/top_categories'
+import FeaturedProducts from './components/featured_products/featured_products'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,6 +28,7 @@ ReactDOM.render(
     <TrendTabs />
     <BestSellers />
     <TopCategories />
+    <FeaturedProducts />
   </React.StrictMode>,
   document.getElementById('root')
 );
