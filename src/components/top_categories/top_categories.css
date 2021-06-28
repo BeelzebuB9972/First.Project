@@ -1,0 +1,7 @@
+.tcfont{
+font-size: larger;
+}
+.tc_brdr{
+    padding-bottom: 0.8rem;
+    border-bottom: .3rem solid var(--yellow);
+}

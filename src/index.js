@@ -16,6 +16,7 @@ import Carousel from './components/carousel/carousel';
 import Features from './components/features/features';
 import TrendTabs from './components/trend_tabs/trend_tabs'
 import BestSellers from './components/best_sellers/best_sellers'
+import TopCategories from './components/top_categories/top_categories'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.render(
     <Features />
     <TrendTabs />
     <BestSellers />
+    <TopCategories />
   </React.StrictMode>,
   document.getElementById('root')
 );

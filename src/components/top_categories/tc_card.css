@@ -1,0 +1,18 @@
+.tc_card > p:hover {
+  color: var(--yellow);
+}
+.tc_card > p > a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+.tc_card > p > a{
+    color: var(--black);
+}
+.tc_hvr:hover{
+    border: 1px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tc_hvr{
+    border-right: 0.1rem solid rgba(165, 162, 162, 0.527) ;
+    margin-bottom: 1.3rem;
+}
