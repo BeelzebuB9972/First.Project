@@ -1,0 +1,78 @@
+.bs-smallf1{
+    font-size: 0.9rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(73, 69, 69);
+    margin-bottom: 0;
+}
+.bs-smallf{
+    font-size: 0.9rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(73, 69, 69);
+    margin-bottom: 0;
+}
+.bs-smallf1{
+    border-top: 0.1rem solid grey;
+    opacity:0
+}
+.bs-bluec{
+    color:blue;
+}
+.bs-bluec:hover{
+    color:var(--yellow)
+}
+.bs-bgw{
+    background-color: transparent !important;
+}
+.bs-brdr{
+    padding:1.5rem;
+    border-left: 0.1rem solid rgb(204, 203, 203) ;
+    opacity: 0.6;
+}
+.bs-hid{
+    opacity: 0;
+    position:relative;
+    top:1rem;
+}
+.bs-brdr:hover{
+    border: 1px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bs-brdr:hover .bs-hid{
+    opacity: 1;
+}
+.bs-brdr:hover .bs-smallf1{
+    opacity: 1;
+}
+.bs-tabanch{
+    color:rgb(31, 31, 31);
+}
+.bs-tabanch:hover{
+    color:var(--yellow);
+    text-decoration: none;
+}
+.bs-pic{
+    height:10rem;
+    width:3rem;
+}
+.bs-disc{
+    text-decoration: line-through;
+}
+.bs-price{
+    font-size: larger;
+    color:var(--red)
+}
+.bs-mty{
+    height: 4rem;
+}
+.bs-sale-tag{
+    position:absolute;
+    top:9rem;
+    /* padding:0.4rem 0.2rem 0.4rem 0.2rem; */
+    background-color:black;
+    color: white;
+    /* border-radius: 1.5rem; */
+}
+/* .pos{
+    position:relative;
+    bottom:100rem
+} */
