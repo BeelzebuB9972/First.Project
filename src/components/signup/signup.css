@@ -1,0 +1,15 @@
+.s_in_brdr{
+    border: 0 transparent;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.s_btn_brdr{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+input[type="text"]:focus{
+    outline: none;
+    box-shadow:none !important;
+    border: 0 transparent !important;
+    }
+    
