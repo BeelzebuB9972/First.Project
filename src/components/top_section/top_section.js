@@ -15,19 +15,22 @@ function top_section() {
             <span className="top_section_span">abc@xyz.com</span>
           </p>
           <p className="offset-md-4 col-md-4">
-            <a className="top_hover">
+            <a href="#" className="top_hover">
               <i className="fas fa-shipping-fast" aria-hidden="true"></i>
               <span className="top_section_span">Your order</span>
             </a>
             <span className="m-4">|</span>
             <span className="top_hover">
-              <i className="fa fa-user" aria-hidden="true"></i>
               <span className="top_section_span">
-                <a href="#" className="top_section_span top_hover">Register </a>
+                <a href="#" className="top_section_span top_hover">
+                  <i className="fa fa-user" aria-hidden="true"></i> Register{" "}
+                </a>
               </span>
             </span>
             or
-            <a href="#" className="top_section_span top_hover">Sign-in</a>
+            <a href="#" className="top_section_span top_hover">
+              Sign-in
+            </a>
           </p>
         </div>
       </div>

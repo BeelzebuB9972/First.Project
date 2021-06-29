@@ -19,6 +19,7 @@ import BestSellers from './components/best_sellers/best_sellers'
 import TopCategories from './components/top_categories/top_categories'
 import FeaturedProducts from './components/featured_products/featured_products'
 import Signup from './components/signup/signup'
+import Footer from './components/footer/footer'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -31,6 +32,7 @@ ReactDOM.render(
     <TopCategories />
     <FeaturedProducts />
     <Signup />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

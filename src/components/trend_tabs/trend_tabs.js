@@ -3,10 +3,10 @@ import './trend_tabs.css'
 
 function Trendtabs() {
 
-  let removeClass = e =>{
-    console.log("hi")
-    document.getElementById("tab1").classList.add("active")
-  }
+  // let removeClass = e =>{
+  //   console.log("hi")
+  //   document.getElementById("tab1").classList.add("active")
+  // }
   const featured = [
     { category: "Black & Machined with Dark Tint", name: "Niche TARGA M130" },
     { category: "SATIN BLACK", name: "Niche Vosso M203"},

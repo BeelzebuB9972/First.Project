@@ -1,0 +1,25 @@
+.foo-link2 >span>a {
+    color:var(--black)
+}
+.foo-link2 >span>a:hover {
+    text-decoration: none;
+    color:var(--red);
+    font-size: large;
+}
+.foo-callus{
+    color: var(--yellow);
+}
+.foo-link1 > h3>a{
+    color:var(--black)
+}
+.foo-link1 >h3>a:hover {
+    color:var(--yellow);
+}
+.foo-link{
+    color:var(--black)
+}
+.foo-link:hover{
+    text-decoration: none;
+    color: var(--yellow);
+}
+
