@@ -1,21 +1,25 @@
-import Card from "./card";
-import './trend_tabs.css'
+import CardCarousel from "./card_carousel";
+import "./trend_tabs.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Trendtabs() {
+  console.log("TrendTabs has been been called");
+  const [response_data, setResponseData] = useState("");
+  useEffect(() => {
+    fetch_trending_data();
+  }, []);
 
-  // let removeClass = e =>{
-  //   console.log("hi")
-  //   document.getElementById("tab1").classList.add("active")
-  // }
-  const featured = [
-    { category: "Black & Machined with Dark Tint", name: "Niche TARGA M130" },
-    { category: "SATIN BLACK", name: "Niche Vosso M203"},
-    { category: "ANTHRACITE", name: "Niche VOSSO M204"},
-    { category: "Bronze", name: "Niche VICE M227"},
-  ];
-  function render_card(list) {
-    return list.map((elem) => <Card data={elem} />);
-  }
+  var trending_url = "https://jsonplaceholder.typicode.com/users";
+  let fetch_trending_data = () => {
+    axios
+      .get(trending_url)
+      .then((response) => {
+        console.log("inside get", response);
+        setResponseData(response);
+      })
+      .catch((err) => console.log(err.response.data));
+  };
   return (
     <div className="container mt-4 pb-5">
       <ul className="nav nav-tabs ultab1">
@@ -24,14 +28,14 @@ function Trendtabs() {
             <b>Featured</b>
           </a>
         </li>
-        <li className="tab1" >
+        <li className="tab1">
           <a data-toggle="tab" href="#Trending">
-          <b>Trending</b>
+            <b>Trending</b>
           </a>
         </li>
         <li className="tab1">
           <a data-toggle="tab" href="#BestSellers">
-          <b>Best Sellers</b>
+            <b>Best Sellers</b>
           </a>
         </li>
       </ul>
@@ -39,14 +43,22 @@ function Trendtabs() {
       <div className="tab-content">
         <div id="Featured" className="tab-pane show fade in active nactive">
           <div className="container">
-            <div className="row mt-5">{render_card(featured)}</div>
+            <div className="row mt-5">
+              <div className="col-12">
+                <CardCarousel data={response_data} />
+              </div>
+            </div>
           </div>
         </div>
         <div id="Trending" className="tab-pane fade nactive">
-        <div className="row mt-5">{render_card(featured)}</div>
+          <div className="row mt-5">
+            <CardCarousel data={response_data} />
+          </div>
         </div>
         <div id="BestSellers" className="tab-pane fade nactive">
-        <div className="row mt-5">{render_card(featured)}</div>
+          <div className="row mt-5">
+            <CardCarousel data={response_data} />
+          </div>
         </div>
       </div>
     </div>
@@ -54,3 +66,10 @@ function Trendtabs() {
 }
 
 export default Trendtabs;
+
+// const featured = [
+//   { category: "Black & Machined with Dark Tint", name: "Niche TARGA M130" },
+//   { category: "SATIN BLACK", name: "Niche Vosso M203"},
+//   { category: "ANTHRACITE", name: "Niche VOSSO M204"},
+//   { category: "Bronze", name: "Niche VICE M227"},
+// ];

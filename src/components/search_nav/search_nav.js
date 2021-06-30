@@ -39,7 +39,7 @@ function search() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-2 offset-md-1">
+        <div className="col-md-2 offset-md-1 col-sm-4 offset-sm-4">
           <b>
             <a href="#" className="logo_anchor">
               LOGO DESIGN
@@ -59,7 +59,7 @@ function search() {
             <i className="fas fa-search "></i>
           </button>
         </div>
-        <div className="col-md-3 order-md-3 offset-md-0 order-lg-3 col-sm-4 offset-sm-6 order-sm-4">
+        <div className="col-md-3 order-md-3 offset-md-0 order-lg-3 col-sm-5 offset-sm-5 order-sm-4">
           <a
             href="#"
             className="sanchor"
@@ -90,7 +90,7 @@ function search() {
         </div>
 
         <div className="col-md-12 offset-md-0 order-md-4 col-sm-2 order-sm-3">
-          <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+          <nav class="navbar navbar-expand-lg navbar-light bg-warning mq-bg">
             <button
               class="navbar-toggler"
               type="button"

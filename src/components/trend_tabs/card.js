@@ -1,8 +1,9 @@
 import "./card.css";
 
 function card(data) {
+  console.log("Card", data);
   return (
-    <div className="col-3 card-brdr">
+    <div className="col-12 card-brdr">
       <p className="card-smallf">{data.data.category}</p>
       <p className="card-bluec">
         <b>{data.data.name}</b>

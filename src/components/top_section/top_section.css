@@ -15,3 +15,12 @@ text-decoration: none;
     text-decoration: none;
     color:black;
 }
+@media screen and (max-width:768px) {
+.mq-hid{
+    display:none;
+}   
+.mq-center{
+    display:flex;
+    justify-content: center;
+} 
+}
