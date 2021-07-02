@@ -84,7 +84,7 @@ function Best_Selleres() {
             </div>
           </div>
         </div>
-        <div id="Subwoofers" className="tab-pane fade nactive">
+        <div id="Subwoofers" className="tab-pane fade">
         <div className="container">
             <div className="row mt-3">
                 <div className="col-7">
@@ -96,7 +96,7 @@ function Best_Selleres() {
             </div>
           </div>
         </div>
-        <div id="Component_Speakers" className="tab-pane fade nactive">
+        <div id="Component_Speakers" className="tab-pane fade">
         <div className="container">
             <div className="row mt-3">
                 <div className="col-7">
@@ -108,7 +108,7 @@ function Best_Selleres() {
             </div>
           </div>
         </div>
-        <div id="Suspension" className="tab-pane fade in nactive">
+        <div id="Suspension" className="tab-pane fade in">
         <div className="container">
             <div className="row mt-3">
                 <div className="col-7">
