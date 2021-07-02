@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { Route, Redirect, Switch, BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'font-awesome/css/font-awesome.min.css';
@@ -10,29 +11,28 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 
+import homeComp from './components/home_page'
+import Product from './components/product/product'
 import TopSection from './components/top_section/top_section';
-import Search from './components/search_nav/search_nav';
-import Carousel from './components/carousel/carousel';
-import Features from './components/features/features';
-import TrendTabs from './components/trend_tabs/trend_tabs'
-import BestSellers from './components/best_sellers/best_sellers'
-import TopCategories from './components/top_categories/top_categories'
+import Search_Nav from './components/search_nav/search_nav';
 import FeaturedProducts from './components/featured_products/featured_products'
 import Signup from './components/signup/signup'
 import Footer from './components/footer/footer'
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
     <TopSection />
-    <Search />
-    <Carousel />
-    <Features />
-    <TrendTabs />
-    <BestSellers />
-    <TopCategories />
+    <Search_Nav />
+    <Switch>
+      <Route exact path="/" render={()=>homeComp()}/>  
+      <Route exact path="/home" render={() => (<Redirect to="/" />)}/>
+      <Route exact path="/product" render={()=>Product()}/>
+    </Switch>
     <FeaturedProducts />
     <Signup />
     <Footer />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -41,7 +41,7 @@ function search() {
       <div className="row">
         <div className="col-md-2 offset-md-1 col-sm-4 offset-sm-4">
           <b>
-            <a href="#" className="logo_anchor">
+            <a href="/product" className="logo_anchor">
               LOGO DESIGN
             </a>
           </b>
@@ -108,7 +108,7 @@ function search() {
             >
               <ul className="navbar-nav ml-auto mr-auto">
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/home" className="nav-link">
                     Home
                   </a>
                 </li>

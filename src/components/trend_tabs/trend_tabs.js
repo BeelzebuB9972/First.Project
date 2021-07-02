@@ -1,7 +1,5 @@
 import CardCarousel from "./card_carousel";
 import "./trend_tabs.css";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Card from "./card";
 import axios from "axios";
 import { useEffect, useState } from "react";
