@@ -35,7 +35,7 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" render={()=>homeComp()}/>  
       <Route exact path="/home" render={() => (<Redirect to="/" />)}/>
-      <Route exact path="/product" render={()=>Product()}/>
+      <Route exact path="/product/:produtInfo" render={params=><Product params={params}/>}/>
     </Switch>
     <FeaturedProducts />
     <Signup />

@@ -1,9 +1,11 @@
+import {connect} from 'react-redux'
 import "./product.css";
 import PriceCard from "./price_card";
 import ProdImgCarousel from "./prod_img_carousel";
 
-
-let Product = () => {
+let Product = (params) => {
+  console.log("match=",params)
+  const compData = params.params.location.state
   return (
     <div className="container mt-4">
       <div className="row">
@@ -11,8 +13,8 @@ let Product = () => {
           <ProdImgCarousel />
         </div>
         <div className="col-md-3 mt-3 col-sm-12">
-          <span className="prod-sfont">Category:</span>
-          <p className="prod-lfont"><b>Name:</b></p>
+          <span className="prod-sfont">{compData.category}</span>
+          <p className="prod-lfont"><b>{compData.name}</b></p>
           <div className="d-flex product">
             <a href="#" className="nav-link">
               <i class="fab fa-facebook-f"></i>
@@ -33,11 +35,12 @@ let Product = () => {
           <li>Category:</li>
         </div>
         <div className="col-md-4 col-sm-12">
-          <PriceCard />
+          <PriceCard data={compData} dispatch={params.dispatch}/>
         </div>
       </div>
     </div>
   );
 };
 
-export default Product;
+const mapStateToProps = state => {return {state}}
+export default connect(mapStateToProps)(Product);

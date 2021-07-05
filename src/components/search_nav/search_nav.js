@@ -1,4 +1,5 @@
 import "./search_nav.css";
+import CartCard from './cart_card'
 import React from "react";
 import {connect} from 'react-redux'
 
@@ -85,13 +86,13 @@ function search({state,dispatch}) {
             <i className="sicon fa fa-heart fa-2x" aria-hidden="true"></i>
             <span className="slink2 badge badge-light">{wishlistCount()}</span>
           </a>
-          <a href="#" className="sanchor drpdown">
+          <a className="sanchor drpdown">
             <i
               className="sicon fa fa-shopping-bag fa-2x"
               aria-hidden="true"
             ></i>
             <span className="slink3 badge badge-warning">{cartCount()}</span>
-            <div class="dropdown-content"></div>
+            <CartCard data={state.cart} dispatch={dispatch}/>
           </a>
         </div>
 

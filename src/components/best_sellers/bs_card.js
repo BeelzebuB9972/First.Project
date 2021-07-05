@@ -1,6 +1,8 @@
 import "./bs_card.css";
+import {Link} from "react-router-dom";
 
 function card(data) {
+  const path = "/product/" + `${JSON.stringify(data.data.name)}`
   const saleTag = ()=>{
     if("sale" in data.data){
       console.log("inside saleTag")
@@ -76,6 +78,9 @@ function card(data) {
   };
   return (
     <div className="col-4 bs-brdr">
+      <Link to={{pathname:path,
+      state: data.data
+      }}>
       <p className="bs-smallf">{data.data.category}</p>
       <p className="bs-bluec">
         <b>{data.data.name}</b>
@@ -100,6 +105,7 @@ function card(data) {
           </span>
         </div>
       </div>
+      </Link>
     </div>
   );
 }

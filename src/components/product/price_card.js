@@ -1,14 +1,22 @@
 import "./price_card.css";
 import { useState } from "react";
+import { addToCart } from "../../actions/index";
 
-let Price_card = () => {
+let Price_card = (props) => {
+  console.log("price_card", props);
   const [qty, setQty] = useState({ quantity: 1, quantityError: null });
+  const price = props.data.price;
+  const data = props.data;
+  const dispatch = props.dispatch;
 
   const updateQty = (e) => {
     console.log("inside onchange");
     let input = e.target.value;
-    console.log(input,input.match(/[\d]*/g).length,input.length)
-    if (input.match(/[\d]*/g)[0].length==input.length && parseInt(input) > 0) {
+    console.log(input, input.match(/[\d]*/g).length, input.length);
+    if (
+      input.match(/[\d]*/g)[0].length == input.length &&
+      parseInt(input) > 0
+    ) {
       setQty({ quantity: e.target.value, quantityError: "" });
     } else
       setQty({
@@ -44,10 +52,16 @@ let Price_card = () => {
         return { quantity: currentQty };
       } else return { quantity: currentQty - 1 };
     });
+  let validateQtyAndAddToCart = () => {
+    if (qty.quantity > 0) {
+      console.log("qty", qty);
+      dispatch(addToCart({ ...data, quantity:qty.quantity }));
+    }
+  };
   return (
     <div className="card-body border mt-3">
       <p>Availability:</p>
-      <p className="price-font">Rs.Price</p>
+      <p className="price-font">Rs.{price}</p>
       <div class="input-group col-md-10 col-sm-8">
         <input
           type="text"
@@ -76,21 +90,24 @@ let Price_card = () => {
         <p className="text text-warning">{qty.quantityError}</p>
       </div>
       <div className="col-md-12">
-        <button className="btn btn-warning d-flex align-items-center justify-content-around pcartbtn">
+        <button
+          className="btn btn-warning d-flex align-items-center justify-content-around pcartbtn"
+          onClick={validateQtyAndAddToCart}
+        >
           <i class="fas fa-shopping-cart pcardwhite" />
           <span>
             <b>Add to cart</b>
           </span>
         </button>
         <div className="col-12 mt-2 d-flex justify-content-around pcard-link">
-        <a href="#">
-          <i className="fa fa-heart "></i>
-          <span>Wishlist</span>
-        </a>
-        <a href="#">
-          <i className="fas fa-exchange-alt"></i>
-          <span>Compare</span>
-        </a>
+          <a href="#">
+            <i className="fa fa-heart "></i>
+            <span>Wishlist</span>
+          </a>
+          <a href="#">
+            <i className="fas fa-exchange-alt"></i>
+            <span>Compare</span>
+          </a>
         </div>
       </div>
     </div>

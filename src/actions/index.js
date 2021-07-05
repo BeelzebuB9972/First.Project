@@ -6,9 +6,10 @@ export const ADD_TO_COMPARE = "ADD_TO_COMPARE"
 export const REMOVE_FROM_COMPARE = "REMOVE_FROM_COMPARE"
 
 export const addToCart = (product)=>{
+    console.log("inside addcart",product)
     return {
         type:ADD_TO_CART,
-        product
+        product:product
     }
 }
 
