@@ -1,0 +1,13 @@
+.product>a{
+    color:var(--black);
+}
+.product>a:hover{
+    color:var(--yellow);
+}
+.prod-lfont{
+font-size: larger;
+}
+.prod-sfont{
+font-size: small;
+font-weight: lighter;
+}

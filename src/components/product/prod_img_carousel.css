@@ -1,7 +1,6 @@
 * {box-sizing: border-box;}
 
 .img-magnifier-container {
-    z-index:100;
   position: relative;
 }
 
