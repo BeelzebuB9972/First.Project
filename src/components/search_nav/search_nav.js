@@ -1,7 +1,9 @@
 import "./search_nav.css";
 import React from "react";
+import {connect} from 'react-redux'
 
-function search() {
+function search({state,dispatch}) {
+  console.log(state,dispatch)
   const bodyKits = ["Honda", "Maruti Suzuki", "Volkswagon", "Chevorlet"];
   const carAudio = [
     "Amplifiers",
@@ -36,6 +38,9 @@ function search() {
       }
     });
   };
+  const cartCount = ()=> state.cart.length
+  const wishlistCount = ()=> state.wishlist.length
+  const compareCount = ()=> state.compare.length
   return (
     <div className="container-fluid">
       <div className="row">
@@ -68,7 +73,7 @@ function search() {
             title="Compare"
           >
             <span className="sicon fas fa-exchange-alt fa-2x"></span>
-            <span className="slink badge badge-light">0</span>
+            <span className="slink badge badge-light">{compareCount()}</span>
           </a>
           <a
             href="#"
@@ -78,14 +83,15 @@ function search() {
             title="Wishlist"
           >
             <i className="sicon fa fa-heart fa-2x" aria-hidden="true"></i>
-            <span className="slink2 badge badge-light">0</span>
+            <span className="slink2 badge badge-light">{wishlistCount()}</span>
           </a>
-          <a href="#" className="sanchor">
+          <a href="#" className="sanchor drpdown">
             <i
               className="sicon fa fa-shopping-bag fa-2x"
               aria-hidden="true"
             ></i>
-            <span className="slink3 badge badge-warning">0</span>
+            <span className="slink3 badge badge-warning">{cartCount()}</span>
+            <div class="dropdown-content"></div>
           </a>
         </div>
 
@@ -244,4 +250,5 @@ function search() {
   );
 }
 
-export default search;
+const mapStateToProps = state => {return {state}}
+export default connect(mapStateToProps)(search);

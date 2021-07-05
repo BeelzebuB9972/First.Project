@@ -38,10 +38,10 @@ input[type="search"]:focus{
 .slink3{
     position:absolute;
     top:2.2rem;
-    left:11rem;
+    right:0.7rem;
 }
 .sanchor{
-    color:black
+    color:black;
 }
 .sanchor:hover{
     color:var(--yellow);
@@ -55,6 +55,19 @@ input[type="search"]:focus{
     color:black;
     
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .sanchor:hover .dropdown-content {display: block;}
+  .drpdown{
+    position: relative;
+    display: inline-block;
+  }
 /*END of Styling of SEARCH section*/
 
 /*START of NAVBAR styling*/

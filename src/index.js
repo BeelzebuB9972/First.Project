@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, Redirect, Switch, BrowserRouter } from 'react-router-dom';
+
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import reducer from './reducers/index'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'font-awesome/css/font-awesome.min.css';
@@ -19,8 +24,11 @@ import FeaturedProducts from './components/featured_products/featured_products'
 import Signup from './components/signup/signup'
 import Footer from './components/footer/footer'
 
+const store = createStore(reducer)
+
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
     <TopSection />
     <Search_Nav />
@@ -33,6 +41,7 @@ ReactDOM.render(
     <Signup />
     <Footer />
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
