@@ -1,10 +1,11 @@
 import "./search_nav.css";
-import CartCard from './cart_card'
+import CartCard from "../cart/cart_card";
+import Wishlist from '../wishlist/wishlist'
 import React from "react";
-import {connect} from 'react-redux'
+import { connect } from "react-redux";
 
-function search({state,dispatch}) {
-  console.log(state,dispatch)
+function search({ state, dispatch }) {
+  console.log("SearchNav",state, dispatch);
   const bodyKits = ["Honda", "Maruti Suzuki", "Volkswagon", "Chevorlet"];
   const carAudio = [
     "Amplifiers",
@@ -39,9 +40,9 @@ function search({state,dispatch}) {
       }
     });
   };
-  const cartCount = ()=> state.cart.length
-  const wishlistCount = ()=> state.wishlist.length
-  const compareCount = ()=> state.compare.length
+  const cartCount = () => state.cart.length;
+  const wishlistCount = () => state.wishlist.length;
+  const compareCount = () => state.compare.length;
   return (
     <div className="container-fluid">
       <div className="row">
@@ -80,19 +81,22 @@ function search({state,dispatch}) {
             href="#"
             className="sanchor"
             data-toggle="tooltip"
+            data-toggle="modal"
+            data-target="#Wishlist"
             data-placement="bottom"
             title="Wishlist"
           >
             <i className="sicon fa fa-heart fa-2x" aria-hidden="true"></i>
             <span className="slink2 badge badge-light">{wishlistCount()}</span>
           </a>
+          <Wishlist wishlist={state.wishlist} dispatch={dispatch}/>
           <a className="sanchor drpdown">
             <i
               className="sicon fa fa-shopping-bag fa-2x"
               aria-hidden="true"
             ></i>
             <span className="slink3 badge badge-warning">{cartCount()}</span>
-            <CartCard data={state.cart} dispatch={dispatch}/>
+            <CartCard data={state.cart} dispatch={dispatch} />
           </a>
         </div>
 
@@ -251,5 +255,7 @@ function search({state,dispatch}) {
   );
 }
 
-const mapStateToProps = state => {return {state}}
+const mapStateToProps = (state) => {
+  return { state };
+};
 export default connect(mapStateToProps)(search);

@@ -17,7 +17,7 @@ import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 
 import ScrollToTop from "./scrollToTop";
-import homeComp from './components/home_page'
+import HomeComp from './components/home_page'
 import Product from './components/product/product'
 import TopSection from './components/top_section/top_section';
 import Search_Nav from './components/search_nav/search_nav';
@@ -35,7 +35,7 @@ ReactDOM.render(
     <TopSection />
     <Search_Nav />
     <Switch>
-      <Route exact path="/" render={()=>homeComp()}/>  
+      <Route exact path="/" render={()=>HomeComp()}/>  
       <Route exact path="/home" render={() => (<Redirect to="/" />)}/>
       <Route exact path="/product/:produtInfo" render={params=><Product params={params}/>}/>
     </Switch>

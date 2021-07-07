@@ -1,7 +1,9 @@
 import Card from "./bs_card";
 import "./best_sellers.css";
+import {connect} from 'react-redux'
 
-function Best_Selleres() {
+function Best_Selleres(props) {
+  console.log("Bestsellers",props)
   let bestSellers = () => {
     let best_sellers_data = [
       {
@@ -36,7 +38,7 @@ function Best_Selleres() {
         price: "14,000.00",
       },
     ];
-    return best_sellers_data.map((elem) => <Card data={elem} />)
+    return best_sellers_data.map((elem) => <Card data={elem} dispatch={props.dispatch} />)
   };
   return (
     <div className="container mt-4 pb-5">
@@ -125,4 +127,4 @@ function Best_Selleres() {
   );
 }
 
-export default Best_Selleres;
+export default connect()(Best_Selleres);

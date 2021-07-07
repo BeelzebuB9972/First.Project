@@ -1,6 +1,7 @@
 import "./price_card.css";
 import { useState } from "react";
-import { addToCart } from "../../actions/index";
+import { addToCart,addToCompare,addToWishlist } from "../../actions/index";
+import { addToWlist, addToCompre } from '../commonFunctions'
 
 let Price_card = (props) => {
   console.log("price_card", props);
@@ -8,6 +9,7 @@ let Price_card = (props) => {
   const price = props.data.price;
   const data = props.data;
   const dispatch = props.dispatch;
+  const productData = props.data
 
   const updateQty = (e) => {
     console.log("inside onchange");
@@ -100,11 +102,11 @@ let Price_card = (props) => {
           </span>
         </button>
         <div className="col-12 mt-2 d-flex justify-content-around pcard-link">
-          <a href="#">
+          <a href="" onClick={(e)=>{addToWlist(e,dispatch,productData,addToWishlist)}}>
             <i className="fa fa-heart "></i>
             <span>Wishlist</span>
           </a>
-          <a href="#">
+          <a href="" onClick={(e)=>{addToCompre(e,dispatch,productData,addToCompare)}}>
             <i className="fas fa-exchange-alt"></i>
             <span>Compare</span>
           </a>

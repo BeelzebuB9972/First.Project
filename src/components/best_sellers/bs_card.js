@@ -1,10 +1,14 @@
 import "./bs_card.css";
 import {useHistory} from "react-router-dom";
+import {addToWishlist } from "../../actions";
+import { addToWlist} from '../commonFunctions'
 
 function Card(data) {
+  const dispatch = data.dispatch
+  const productData = data.data
   const history = useHistory()
   const path = "/product/" + `${btoa(JSON.stringify(data.data.name))}`
-  let navigate = ()=>{
+  let navigate = (e)=>{
     let productData = JSON.stringify(data.data)
     history.push(path,productData)
   }
@@ -82,7 +86,7 @@ function Card(data) {
     }
   };
   return (
-    <div className="col-4 bs-brdr" onClick={navigate}>
+    <div className="col-4 bs-brdr" onClick={(e)=>{navigate(e)}}>
       <p className="bs-smallf">{data.data.category}</p>
       <p className="bs-bluec">
         <b>{data.data.name}</b>
@@ -93,14 +97,14 @@ function Card(data) {
         {priceListings()}
         <div className="pos">
           <span className="bs-smallf1">
-            <a href="#" className="pr-2 bs-tabanch">
+            <a href="" className="pr-2 bs-tabanch">
               <span
                 className="fas fa-exchange-alt bs-hid"
                 aria-bs-hidden="true"
               ></span>
               <span className="bs-hid"> Quick View </span>
             </a>
-            <a href="#" className="bs-tabanch">
+            <a href="" className="bs-tabanch" onClick={(e)=>{addToWlist(e,dispatch,productData,addToWishlist)}}>
               <i className="fa fa-heart bs-hid" aria-bs-hidden="true"></i>
               <span className="bs-hid"> Wishlist </span>
             </a>

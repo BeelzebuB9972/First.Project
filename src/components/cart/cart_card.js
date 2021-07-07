@@ -79,13 +79,13 @@ const CartCard = (props) => {
                 </div>
               </div>
               <button
-                type="button"
-                className="btn btn-close col-1"
-                aria-label="Close"
-                onClick={() => updateCart(elem)}
-              >
-                X
-              </button>
+                    type="button"
+                    class="close"
+                    aria-label="Close"
+                    onClick={() => updateCart(elem)}
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
             </div>
             <hr />
           </div>
