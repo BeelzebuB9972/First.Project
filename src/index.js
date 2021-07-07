@@ -16,6 +16,7 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 
+import ScrollToTop from "./scrollToTop";
 import homeComp from './components/home_page'
 import Product from './components/product/product'
 import TopSection from './components/top_section/top_section';
@@ -30,6 +31,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
+    <ScrollToTop/>
     <TopSection />
     <Search_Nav />
     <Switch>

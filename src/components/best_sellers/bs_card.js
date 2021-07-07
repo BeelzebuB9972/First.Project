@@ -1,8 +1,13 @@
 import "./bs_card.css";
-import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
-function card(data) {
-  const path = "/product/" + `${JSON.stringify(data.data.name)}`
+function Card(data) {
+  const history = useHistory()
+  const path = "/product/" + `${btoa(JSON.stringify(data.data.name))}`
+  let navigate = ()=>{
+    let productData = JSON.stringify(data.data)
+    history.push(path,productData)
+  }
   const saleTag = ()=>{
     if("sale" in data.data){
       console.log("inside saleTag")
@@ -77,10 +82,7 @@ function card(data) {
     }
   };
   return (
-    <div className="col-4 bs-brdr">
-      <Link to={{pathname:path,
-      state: data.data
-      }}>
+    <div className="col-4 bs-brdr" onClick={navigate}>
       <p className="bs-smallf">{data.data.category}</p>
       <p className="bs-bluec">
         <b>{data.data.name}</b>
@@ -105,9 +107,8 @@ function card(data) {
           </span>
         </div>
       </div>
-      </Link>
     </div>
   );
 }
 
-export default card;
+export default Card;

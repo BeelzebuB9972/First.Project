@@ -73,6 +73,12 @@
     color: white;
     /* border-radius: 1.5rem; */
 }
+.bs-link:hover{
+    text-decoration: none;
+}
+.bs-link{
+    color:black
+}
 /* .pos{
     position:relative;
     bottom:100rem

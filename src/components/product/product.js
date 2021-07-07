@@ -3,11 +3,12 @@ import "./product.css";
 import PriceCard from "./price_card";
 import ProdImgCarousel from "./prod_img_carousel";
 
-let Product = (params) => {
-  console.log("match=",params)
-  const compData = params.params.location.state
+let Product = (props) => {
+  console.log("match=",props)
+  const compData = JSON.parse(props.params.location.state)
   return (
-    <div className="container mt-4">
+    <>
+    <div className="container mt-4 pb-5">
       <div className="row">
         <div className="col-md-5 col-sm-12">
           <ProdImgCarousel />
@@ -35,10 +36,37 @@ let Product = (params) => {
           <li>Category:</li>
         </div>
         <div className="col-md-4 col-sm-12">
-          <PriceCard data={compData} dispatch={params.dispatch}/>
+          <PriceCard data={compData} dispatch={props.dispatch}/>
         </div>
       </div>
-    </div>
+      </div>
+      <div className="container-fullwidth bg-light pt-3 pb-3">
+        <div className="container">
+      <div className="row">
+        <ul className="nav">
+          <li className="active pdesc">
+            <a href="#Description" className="active" data-toggle="tab"><b>Description</b></a>
+          </li>
+          <li className="pdesc">
+          <a href="#Review" data-toggle="tab"><b>Review</b></a>
+          </li>
+        </ul>
+      </div>
+      <hr/>
+      <div className="tab-content container bg-white">
+      <div
+          id="Description"
+          className="tab-pane show fade in active"
+        > 
+        <h2>!!DESCRIPTION OF THE PRODUCT!!</h2>
+      </div>
+      <div id="Review" className="tab-pane show fade in">
+        <h2>!!Reviews for the product!!</h2>
+      </div>
+      </div>
+      </div>
+      </div>
+      </>
   );
 };
 

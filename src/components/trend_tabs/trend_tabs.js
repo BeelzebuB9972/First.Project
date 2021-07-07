@@ -56,7 +56,7 @@ function Trendtabs() {
   return (
     <div className="container mt-4 pb-5">
       <ul className="nav nav-tabs ultab1">
-        <li className="tab1 ">
+        <li className="tab1 active">
           <a data-toggle="tab" className="active" href="#Featured">
             <b>Featured</b>
           </a>
@@ -66,7 +66,7 @@ function Trendtabs() {
             <b>Trending</b>
           </a>
         </li>
-        <li className="tab1 active">
+        <li className="tab1">
           <a data-toggle="tab" href="#BestSellers">
             <b>Best Sellers</b>
           </a>

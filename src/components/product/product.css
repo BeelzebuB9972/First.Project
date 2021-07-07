@@ -1,13 +1,34 @@
-.product>a{
-    color:var(--black);
+.product > a {
+  color: var(--black);
 }
-.product>a:hover{
-    color:var(--yellow);
+.product > a:hover {
+  color: var(--yellow);
 }
-.prod-lfont{
-font-size: larger;
+.prod-lfont {
+  font-size: larger;
 }
-.prod-sfont{
-font-size: small;
-font-weight: lighter;
+.prod-sfont {
+  font-size: small;
+  font-weight: lighter;
 }
+.pdesc {
+  padding-right: 4rem;
+  padding-left: 2rem;
+}
+.pdesc > a {
+  text-decoration: none;
+  color: black;
+}
+.pdesc > a {
+  margin-bottom:0px;
+  font-size: x-large;
+}
+.pdesc > a.active {
+    padding-bottom: 0.9rem;
+  border-bottom: .2rem solid var(--yellow);
+}
+.pdesc > a:hover {
+    padding-bottom: 0.9rem;
+  border-bottom: .2rem solid var(--yellow);
+}
+
