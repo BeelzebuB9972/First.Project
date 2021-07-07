@@ -1,9 +1,14 @@
 import "./card.css";
+import {addToWishlist} from "../../actions/index";
+import { addToWlist} from '../commonFunctions'
+
+
 
 function card(data) {
   console.log("Card", data);
   return (
-    <div className="col-12 card-brdr item">
+    <>
+    <div className="col-3 card-brdr item">
       <p className="card-smallf">{data.data.category}</p>
       <p className="card-bluec">
         <b>{data.data.name}</b>
@@ -19,7 +24,7 @@ function card(data) {
               ></span>
               <span className="card-hid"> Quick View </span>
             </a>
-            <a href="#" className="card-tabanch">
+            <a href="" className="card-tabanch" onClick={(e)=>{addToWlist(e,data.dispatch,data.data,addToWishlist)}}>
               <i className="fa fa-heart card-hid" aria-hidden="true"></i>
               <span className="card-hid"> Wishlist </span>
             </a>
@@ -27,6 +32,7 @@ function card(data) {
         </div>
       </div>
     </div>
+  </>
   );
 }
 

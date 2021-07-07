@@ -18,3 +18,17 @@
 .nactive{
     border-bottom:transparent !important;
 }
+.card-body {
+    min-height: 300px;
+    min-width: 300px;
+    margin-right: 5px;
+}
+.horscroll{
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    overflow: -moz-scrollbars-none;
+}
+.horscroll::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
