@@ -1,6 +1,7 @@
 import "./search_nav.css";
 import CartCard from "../cart/cart_card";
 import Wishlist from '../wishlist/wishlist'
+import Compare from '../compare/compare'
 import React from "react";
 import { connect } from "react-redux";
 
@@ -71,12 +72,15 @@ function search({ state, dispatch }) {
             href="#"
             className="sanchor"
             data-toggle="tooltip"
+            data-toggle="modal"
+            data-target="#Compare"
             data-placement="bottom"
             title="Compare"
           >
             <span className="sicon fas fa-exchange-alt fa-2x"></span>
             <span className="slink badge badge-light">{compareCount()}</span>
           </a>
+          <Compare compare={state.compare} dispatch={dispatch} />
           <a
             href="#"
             className="sanchor"
