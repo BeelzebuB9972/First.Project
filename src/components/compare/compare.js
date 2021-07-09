@@ -12,7 +12,7 @@ let Compare = ({ compare, dispatch }) => {
         case "Features":
           return compare.map((elem) => {
             return (
-              <div className="col">
+              <div className="col border p-2">
                 <div className="row">
                   <div className="col">
                     <button
@@ -21,7 +21,7 @@ let Compare = ({ compare, dispatch }) => {
                       aria-label="Close"
                       onClick={() => dispatch(removeFromCompare(elem))}
                     >
-                      <span aria-hidden="true">&times;</span>
+                      <i class="fa fa-trash-alt"></i>
                     </button>
                   </div>
                 </div>
@@ -43,22 +43,22 @@ let Compare = ({ compare, dispatch }) => {
           break;
         case "Availability":
           return compare.map((elem) => {
-            return <div className="col">Available or Not</div>;
+            return <div className="col border p-2">Available or Not</div>;
           });
           break;
-        case "Options":
-          return compare.map((elem) => <div className="col"> </div>);
+        case "Optons":
+          return compare.map((elem) =><div className="col border p-2">Options</div>);
           break;
         case "Vendor":
-          return compare.map((elem) => <div className="col">Vendor Name</div>);
+          return compare.map((elem) => <div className="col border p-2">Vendor Name</div>);
           break;
         case "Collection":
           return compare.map((elem) => (
-            <div className="col">Collection Name</div>
+            <div className="col border p-2">Collection Name</div>
           ));
           break;
         case "Rating":
-          return compare.map((elem) => <div className="col">Rating</div>);
+          return compare.map((elem) => <div className="col border p-2">Rating</div>);
           break;
         default:
           break;
@@ -88,34 +88,42 @@ let Compare = ({ compare, dispatch }) => {
             </button>
           </div>
           <div class="modal-body">
-            <div className="container">
-              <div className="row">
-                <div className="col">
-                  <div className="row">
-                    <div className="col-1 p-2">Features</div>
-                    {renderCompareProducts("Features")}
-                  </div>
-                  <div className="row">
-                    <div className="col-1 p-2">Availability</div>
-                    {renderCompareProducts("Availability")}
-                  </div>
-                  <div className="row">
-                    <div className="col-1 p-2">Options</div>
-                    {renderCompareProducts("Options")}
-                  </div>
-                  <div className="row">
-                    <div className="col-1 p-2">Vendor</div>
-                    {renderCompareProducts("Vendor")}
-                  </div>
-                  <div className="row">
-                    <div className="col-1 p-2">Collection</div>
-                    {renderCompareProducts("Collection")}
-                  </div>
-                  <div className="row">
-                    <div className="col-1 p-2">Rating</div>
-                    {renderCompareProducts("Rating")}
-                  </div>
+            <div className="container-fullwidth">
+              <div className="row border">
+                <div className="col p-2 bg-light">
+                  <b>Features</b>
                 </div>
+                {renderCompareProducts("Features")}
+              </div>
+              <div className="row border">
+                <div className="col p-2 bg-light">
+                  <b>Availability</b>
+                </div>
+                {renderCompareProducts("Availability")}
+              </div>
+              <div className="row border">
+                <div className="col p-2 bg-light">
+                  <b>Optons</b>
+                </div>
+                {renderCompareProducts("Optons")}
+              </div>
+              <div className="row border">
+                <div className="col p-2 bg-light">
+                  <b>Vendor</b>
+                </div>
+                {renderCompareProducts("Vendor")}
+              </div>
+              <div className="row border">
+                <div className="col p-2 bg-light">
+                  <b>Collection</b>
+                </div>
+                {renderCompareProducts("Collection")}
+              </div>
+              <div className="row border">
+                <div className="col p-2 bg-light border">
+                  <b>Rating</b>
+                </div>
+                {renderCompareProducts("Rating")}
               </div>
             </div>
           </div>

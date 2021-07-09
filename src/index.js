@@ -16,14 +16,15 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 
-import ScrollToTop from "./scrollToTop";
+import Scroll from "./scrollToTop";
 import HomeComp from './components/home_page'
 import Product from './components/product/product'
 import TopSection from './components/top_section/top_section';
-import Search_Nav from './components/search_nav/search_nav';
+import SearchNav from './components/search_nav/search_nav';
 import FeaturedProducts from './components/featured_products/featured_products'
 import Signup from './components/signup/signup'
 import Footer from './components/footer/footer'
+import Toast from './components/toast/toast'
 
 const store = createStore(reducer)
 
@@ -31,9 +32,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
-    <ScrollToTop/>
+    <Scroll/>
     <TopSection />
-    <Search_Nav />
+    <SearchNav />
     <Switch>
       <Route exact path="/" render={()=>HomeComp()}/>  
       <Route exact path="/home" render={() => (<Redirect to="/" />)}/>
@@ -42,6 +43,7 @@ ReactDOM.render(
     <FeaturedProducts />
     <Signup />
     <Footer />
+    <Toast/>
     </BrowserRouter>
     </Provider>
   </React.StrictMode>,

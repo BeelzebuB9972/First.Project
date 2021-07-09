@@ -84,7 +84,7 @@ const CartCard = (props) => {
                     aria-label="Close"
                     onClick={() => updateCart(elem)}
                   >
-                    <span aria-hidden="true">&times;</span>
+                    <i class="fa fa-trash-alt"></i>
                   </button>
             </div>
             <hr />

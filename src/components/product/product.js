@@ -36,7 +36,7 @@ let Product = (props) => {
           <li>Category:</li>
         </div>
         <div className="col-md-4 col-sm-12">
-          <PriceCard data={compData} dispatch={props.dispatch}/>
+          <PriceCard data={compData} dispatch={props.dispatch} state={props.state}/>
         </div>
       </div>
       </div>

@@ -26,6 +26,7 @@ const userInfo = (state = userData, action) => {
         if (
           state.cart.filter((elem) => {
             if (elem.name === action.product.name) return elem;
+            else return null
           }).length === 1
         ) {
           console.log("inside if filter");
@@ -60,6 +61,7 @@ const userInfo = (state = userData, action) => {
         if (
           state.wishlist.filter((elem) => {
             if (elem.name === action.product.name) return elem;
+            else return null
           }).length === 1
         ) {
           console.log("inside if filter");
@@ -86,6 +88,7 @@ const userInfo = (state = userData, action) => {
         if (
           state.compare.filter((elem) => {
             if (elem.name === action.product.name) return elem;
+            else return null
           }).length === 1
         ) {
           return {
@@ -110,7 +113,8 @@ const userInfo = (state = userData, action) => {
           )
         ) {
           return elem;
-        }
+          
+        }else return null
       });
       return {
         ...state,
@@ -122,7 +126,7 @@ const userInfo = (state = userData, action) => {
       let updatedwishlist = state.wishlist.filter((elem) => {
         if (!(elem.name === action.product.name)) {
           return elem;
-        }
+        }else return null
       });
       return {
         ...state,
@@ -134,7 +138,7 @@ const userInfo = (state = userData, action) => {
       let updatedcompare = state.compare.filter((elem) => {
         if (!(elem.name === action.product.name)) {
           return elem;
-        }
+        }else return null
       });
       return {
         ...state,

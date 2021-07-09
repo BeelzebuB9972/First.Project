@@ -18,7 +18,7 @@ let FpCard = (props) => {
                     aria-label="Close"
                     onClick={()=>props.dispatch(removeFromWishlist(props.wishlist))}
                   >
-                    <span aria-hidden="true">&times;</span>
+                    <i class="fa fa-trash-alt"></i>
                   </button>
           </p>
           <p>
